@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image map</title>
+    <script>
+        function myFunction(e)  {
+            x= e.clientX;
+            y= e.clientY;
+            coor= "Coordinates: ("+ x +"," +y +")";
+            document.getElementById("demo").innerHTML= coor
+        }
+
+        function clearCoor()  {
+            document.getElementById("demo").innerHTML=" ";
+        }
+
+        function print(x)  {
+            alert("you clicked "+x);
+        }
+    </script>
+</head>
+<body>
+    <img src="imagemap.png" alt="imagemap" usemap="#imagemap" width="300" height="279" >
+    <br/>
+    <p id="demo"></p>
+    <map name="imagemap">
+        <area shape="circle" coords="55, 55, 40" onclick="print(1)">
+        <area shape="circle" coords="160, 55, 40" onclick="print(2)">
+        <area shape="circle" coords="255, 55, 40" onclick="print(3)">
+        <area shape="circle" coords="55, 145, 40" onclick="print(4)">
+        <area shape="circle" coords="160, 145, 40" onclick="print(5)">
+        <area shape="circle" coords="255, 145, 40" onclick="print(6)">
+        <area shape="circle" coords="55, 245, 40" onclick="print(7)">
+        <area shape="circle" coords="160, 245, 40" onclick="print(8)">
+        <area shape="circle" coords="255, 245, 40" onclick="print(9)">
+    </map>
+</body>
+</html>

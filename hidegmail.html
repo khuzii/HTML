@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="gmail" value="" id="demo">
+    <input type="button" value="hide" onclick="hide()">
+</body>
+<script>
+    function hide()  {
+        var str= document.getElementById("demo").value;
+        var str1= str.split("@");
+        var star= "";
+        for(var i=0; i<str1[0].length; i++)  {
+            star= star+"*";
+        }
+        var str2= str1[0].replace(str1[0],star);
+        document.write(str2+"@"+str1[1]);
+    }
+</script>
+</html>

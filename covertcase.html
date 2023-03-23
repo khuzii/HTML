@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="" id="demo">
+    <input type="button" value="convert_case" onclick="convert_case()">
+</body>
+<script>
+    function convert_case() 
+    {
+        var str= document.getElementById("demo").value;
+        var ans="";
+        for(var i=0; i<str.length; i++)  {
+            if(str[i]>='a' && str[i]<='z')  {
+                ans+= str[i].toUpperCase();
+            }
+            else if(str[i]>='A' && str[i]<='Z')  {
+                ans+= str[i].toLowerCase();
+            }
+            else  {
+                ans+= str[i];
+            }
+        }
+        document.write(ans);
+    }
+</script>
+</html>

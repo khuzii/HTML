@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="" id="demo">
+    <input type="button" value="upper" onclick="upper()">
+</body>
+<script>
+    function upper()  {
+        var str= document.getElementById("demo").value;
+        var str1= str.split(" ");
+        var ans="";
+        for(var i=0; i<str1.length; i++)  {
+            ans +=str1[i][0].toUpperCase()+str1[i].substring(1)+" ";
+        }
+        document.write(ans);
+    }
+</script>
+</html>
